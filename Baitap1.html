@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai_tap1</title>
+</head>
+<body>
+<script>
+    let arr1 = [10, 5, 2, 8, -1, 6, 8];
+    let arr2 = [2,4,0,5,1];
+    let arr3 = [-8,-6,-2,-6,-1,-1,-4]
+
+    function findMaxScore(arr) {
+        let max = arr[0];
+        for (i = 0; i < arr.length; i++) {
+            if (max < arr[i]) {
+                max = arr[i];
+            }
+        }
+        return max;
+    };
+
+    alert(findMaxScore(arr1));
+    alert(findMaxScore(arr2));
+    alert(findMaxScore(arr3));
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai_tap4</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1000" height="800" style="border:1px solid #c3c3c3;">
+</canvas>
+<script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+
+    let Rectangle = function (x, y, width, heigh) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = heigh;
+        this.color = function (index) {
+            ctx.fillStyle = index;
+        }
+        this.render = function () {
+            ctx.beginPath();
+            this.color()
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+            ctx.closePath();
+        }
+    }
+    let rectangle = new Rectangle(10, 10, 200, 100);
+    rectangle.color('#000000');
+    rectangle.render();
+
+</script>
+</body>
+</html>
